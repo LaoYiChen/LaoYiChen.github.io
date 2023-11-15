@@ -11,40 +11,42 @@
             min-height: 100%;
             height: auto;
             background-color: rgb(0, 0, 0);
-            z-index: -2
+            color: white; /* 设置文本颜色 */
         }
 
         #menu-bar, #bottom-bar {
             position: relative;
             width: 100%;
             z-index: 3; 
+            text-align: center; /* 文本居中 */
+            padding: 15px; /* 添加一些内边距 */
         }
 
         #menu-bar {
             top: 0;
-            height: 70px; 
-            background-color: black;
+            height: 90px; 
+            background-color: rgb(1, 10, 26);
         }
 
         #bottom-bar {
             bottom: 0;
-            height: 50px; 
-            background-color: black;
+            height: 90px;
+            background-color: rgb(0, 0, 0); 
         }
 
         #video-container {
             position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1920px;
-            z-index: -1;
+            width: 100%;
+            max-width: 1920px; /* 设置最大宽度，防止视频过大 */
+            margin: 0 auto; /* 居中 */
+            z-index: 2;
         }
 
         .overlay {
             position: absolute;
-            width: 1300px; /* 设置宽度 */
-            height: 88%; /* 设置高度 */
-            margin: auto; /* 使其水平和垂直居中 */
+            width: 1300px;
+            height: 79%;
+            margin: auto;
             top: 0;
             left: 0;
             bottom: 0;
@@ -55,13 +57,14 @@
             background: rgba(0, 0, 0, 0.65);
             backdrop-filter: blur(2px);
             color: white;
-            z-index: 2
         }
     </style>
 </head>
 <body>
 
-    <div id="menu-bar"></div>
+    <div id="menu-bar">
+        <p>This is the menu bar</p>
+    </div>
 
     <div id="video-container">
         <video id="video-background" playsinline autoplay muted loop>
@@ -70,13 +73,13 @@
         </video>
     </div>
 
-    <div class="overlay">
-        <!-- 在这里放置您的半透明黑色内容 -->
-        <p>个人主页还在编写，别慌别催...</p>
-        <!-- 可以继续添加其他元素 -->
+    <div id="bottom-bar">
+        <p>This is the bottom bar</p>
     </div>
 
-    <div id="bottom-bar"></div>
+    <div class="overlay">
+        <p>This is the overlay</p>
+    </div>
 
 </body>
 </html>
