@@ -8,24 +8,52 @@
 </head>
 <body>
 
-    <div id="menu-bar">
-        <p>This is the menu bar</p>
+    <div id="loading-container">
+        <img id="loading-image" src="imgs/upload.gif" alt="Loading...">
     </div>
 
-    <div id="video-container">
-        <video id="video-background" playsinline autoplay muted loop>
-            <source src="video/Beas_background.mp4" type="video/mp4">
-        </video>
+    <div id="content-container" style="display: none;">
+        <!-- 这里放你的网页内容 -->
+        <div id="menu-bar">
+            <p>This is the menu bar</p>
+        </div>
+
+        <div id="video-container">
+            <video id="video-background" playsinline autoplay muted loop>
+                <source src="video/Beas_background.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="bottom-bar">
+            <p>This is the bottom bar</p>
+        </div>
+
+        <div class="overlay">
+            <p>This is the overlay</p>
+        </div>
     </div>
 
-    <div id="bottom-bar">
-        <p>This is the bottom bar</p>
-    </div>
+    <script>
+        // 获取加载动画和图片元素
+        const loadingContainer = document.getElementById('loading-container');
+        const contentContainer = document.getElementById('content-container');
+        const loadedImage = document.getElementById('loading-image');
 
-    <div class="overlay">
-        <p>This is the overlay</p>
-    </div>
+        // 图片加载完成事件
+        loadedImage.addEventListener('load', function () {
+            // 隐藏加载动画，显示内容容器
+            loadingContainer.style.display = 'none';
+            contentContainer.style.display = 'block';
+        });
 
-    <script src="js/main.js"></script>
+        // 如果加载时间小于 2000 毫秒（2 秒），则设置一个 2 秒的定时器
+        const minLoadingTime = 2000;
+
+        setTimeout(() => {
+            loadingContainer.style.display = 'none';
+            contentContainer.style.display = 'block';
+        }, minLoadingTime);
+    </script>
+
 </body>
 </html>
