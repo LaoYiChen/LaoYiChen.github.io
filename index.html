@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome on my homepage!</title>
+    <title>奕承|YiChen</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,6 +16,17 @@
         <!-- 这里放你的网页内容 -->
         <div id="menu-bar">
             <p>This is the menu bar</p>
+            <!-- 自定义搜索框 -->
+            <div class="custom-search-bar">
+                <form action="https://www.bing.com/search" method="GET" target="_blank">
+                    <div id="search-bar-container">
+                        <input type="text" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">
+                            <img src="imgs/search.png" alt="Search">
+                        </button>
+                    </div>
+                </form>
+            </div>            
         </div>
 
         <div id="video-container">
@@ -53,6 +64,7 @@
             loadingContainer.style.display = 'none';
             contentContainer.style.display = 'block';
         }, minLoadingTime);
+
     </script>
 
 </body>
