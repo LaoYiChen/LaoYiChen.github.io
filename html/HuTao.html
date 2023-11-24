@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>想要联系我的话</title>
+    <link rel="stylesheet" href="../css/HuTao.css">
+</head>
+<body>
+
+    <div id="loading-container">
+        <img id="loading-image" src="../imgs/upload.gif" alt="Loading...">
+    </div>
+
+    <div id="content-container" style="display: none;">
+        <!-- 这里放你的网页内容 -->
+        <div id="menu-bar">
+            <p>有什么需要告诉我的嘛(●'◡'●)</p>
+            <!-- 自定义搜索框 -->
+            <div class="custom-search-bar">
+                <form action="https://www.bing.com/search" method="GET" target="_blank">
+                    <div id="search-bar-container">
+                        <input type="text" id="search-bar" name="q" placeholder="Search...">
+                        <button type="submit" id="search-button">
+                            <img src="../imgs/search.png" alt="Search">
+                        </button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+        
+        <div id="video-container">
+            <video id="video-background" playsinline autoplay muted loop>
+                <source src="../video/Beas_background.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="bottom-bar">
+            <p>copyright © 2023-2024 奕承|YiChen 暂未备案</p>
+        </div>
+
+        <div class="overlay-A">
+            <span class="text-blockA">"This is my WeChat"</span>
+            <span class="text-blockA-A"><br>Y<br>C<br>1<br>4<br>1<br>3<br>1<br>3</span>
+            <img class="social-logo" src="../imgs/WX-logo.png" alt="WX-logo">
+        </div>
+
+        <div class="overlay-B">
+            <span class="text-blockB">如要联系我<br>请备注来意哦<br>暂时不接商单之类的<br>望周知</span>
+        </div>
+
+        <div class="overlay-C">
+            <span class="text-blockC">"This is my QQ"</span>
+            <span class="text-blockC-A"><br>2<br>6<br>8<br>7<br>6<br>5<br>9<br>9<br>8</span>
+            <img class="social-logo" src="../imgs/QQ-logo.png" alt="QQ-logo">
+        </div>
+
+    </div>
+
+    <script>
+        // 获取加载动画和图片元素
+        const loadingContainer = document.getElementById('loading-container');
+        const contentContainer = document.getElementById('content-container');
+        const loadedImage = document.getElementById('loading-image');
+
+        // 图片加载完成事件
+        loadedImage.addEventListener('load', function () {
+            // 隐藏加载动画，显示内容容器
+            loadingContainer.style.display = 'none';
+            contentContainer.style.display = 'block';
+        });
+
+        // 如果加载时间小于 2000 毫秒（2 秒），则设置一个 2 秒的定时器
+        const minLoadingTime = 2000;
+
+        setTimeout(() => {
+            loadingContainer.style.display = 'none';
+            contentContainer.style.display = 'block';
+        }, minLoadingTime);
+
+    </script>
+
+</body>
+</html>

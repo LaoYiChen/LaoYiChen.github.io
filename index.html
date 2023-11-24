@@ -12,10 +12,15 @@
         <img id="loading-image" src="imgs/upload.gif" alt="Loading...">
     </div>
 
-    <div id="content-container" style="display: none;">
+    <audio id="audioElement" controls loop>
+        <source src="music/ShibayanRecords - タイニーリトル・アジアンタム.ogg" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div id="content-container">
         <!-- 这里放你的网页内容 -->
         <div id="menu-bar">
-            <p>This is the menu bar</p>
+            <p>Welcome To My Howepage</p>
             <!-- 自定义搜索框 -->
             <div class="custom-search-bar">
                 <form action="https://www.bing.com/search" method="GET" target="_blank">
@@ -28,7 +33,7 @@
                 </form>
             </div>            
         </div>
-
+        
         <div id="video-container">
             <video id="video-background" playsinline autoplay muted loop>
                 <source src="video/Beas_background.mp4" type="video/mp4">
@@ -36,36 +41,66 @@
         </div>
 
         <div id="bottom-bar">
-            <p>This is the bottom bar</p>
+            <p>copyright © 2023-2024 奕承|YiChen 暂未备案</p>
         </div>
 
-        <div class="overlay">
-            <p>This is the overlay</p>
+        <div class="overlay-A">
+            <span class="text-blockA">暂时没想好写啥<br>算是还在施工中吧(●'◡'●)<br>反正慢慢写，并持续更新<br>目前随便写点凑凑字数<br>让排版好看点<br>哦对了！千万不要点胡桃哦！</span>
+        </div>
+
+        <div class="overlay-B">
+            <span class="text-blockB">加入我的工程文件，来做苦力~</span>
+        </div>
+
+        <div class="overlay-C">
+            <span class="text-blockC">这是我的B站主页，里面收纳整理了很多“AI绘画&编曲”&"Maya"&"剪辑动画"等视频合集</span>
+        </div>
+
+        <div class="overlay-D">
+            <span class="text-blockD">This is music</span>
+        </div>
+
+        <div class="overlay-E">
+            <span class="text-blockE">This is my twitter, <br>of course there's nothing in it yet now</span>
+        </div>
+
+
+    </div>
+
+    <div id="social-container">
+        <div class="social-box">
+            <!-- GitHub -->
+            <a href="https://github.com/LaoYiChen/LaoYiChen.github.io" target="_blank">
+                <div class="logo-overlay-A">
+                    <img class="social-logo" src="imgs/GitHub.png" alt="GitHbub">
+                </div>
+            </a>
+    
+            <!-- BiliBili -->
+            <a href="https://space.bilibili.com/323256324?spm_id_from=333.1007.0.0" target="_blank">
+                <div class="logo-overlay-B">
+                    <img class="social-logo" src="imgs/BiliBili.png" alt="BiliBili">
+                </div>
+            </a>
+
+            <!-- twitter -->
+            <a href="https://twitter.com/YiChen44554232" target="_blank">
+                <div class="logo-overlay-C">
+                    <img class="social-logo" src="imgs/twitter.png" alt="twitter">
+                </div>
+            </a>
+
+            <!-- HuTao -->
+            <a href="html/HuTao.html" target="_blank">
+                <div class="logo-overlay-D">
+                    <img class="social-logo" src="imgs/HuTao.png" alt="HuTao">
+                </div>
+            </a>
+            
         </div>
     </div>
 
-    <script>
-        // 获取加载动画和图片元素
-        const loadingContainer = document.getElementById('loading-container');
-        const contentContainer = document.getElementById('content-container');
-        const loadedImage = document.getElementById('loading-image');
-
-        // 图片加载完成事件
-        loadedImage.addEventListener('load', function () {
-            // 隐藏加载动画，显示内容容器
-            loadingContainer.style.display = 'none';
-            contentContainer.style.display = 'block';
-        });
-
-        // 如果加载时间小于 2000 毫秒（2 秒），则设置一个 2 秒的定时器
-        const minLoadingTime = 2000;
-
-        setTimeout(() => {
-            loadingContainer.style.display = 'none';
-            contentContainer.style.display = 'block';
-        }, minLoadingTime);
-
-    </script>
+    <script src="js/logo.js"></script>
 
 </body>
 </html>
