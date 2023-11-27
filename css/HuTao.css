@@ -61,8 +61,8 @@ body {
 /*中间内容设置*/
 .overlay-A, .overlay-B,.overlay-C {
     position: absolute;
-    width: 350px;
-    height: 500px;
+    width: 19%;
+    height: 55%;
     margin: auto;
     z-index: 3;
     overflow-y: auto;
@@ -76,24 +76,24 @@ body {
 }
 
 .overlay-A {
-    top: 100px;
-    left: 1000px;
+    top: 10%;
+    left: 55%;
     bottom: 0px;
     right: 0px;
 }
 
 .overlay-B {
-    top: 100px;
+    top: 10%;
     left: 0px;
     bottom: 0px;
     right: 0px;
 }
 
 .overlay-C {
-    top: 100px;
+    top: 10%;
     left: 0px;
     bottom: 0px;
-    right: 1000px;
+    right: 55%;
 }
 
 .text-blockC, .text-blockA {
@@ -150,13 +150,20 @@ body {
 }
 
 /*搜索栏整体设置*/
-.custom-search-bar {
-    position: relative;
-}
 
-#search-bar-container {
-    position: relative;
-    top: 80px; /* 调整搜索栏容器的上边距 */
+.search-box {
+    position: absolute;
+    top: 15%;
+    left: 52%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    height: 10%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.0); /* 这里设置为红色的半透明背景，你可以根据需要调整颜色和透明度 */
 }
 
 #search-bar {

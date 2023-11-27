@@ -1,3 +1,35 @@
+/* 适用于屏幕宽度在 960px 到 1199px 之间的设备 */
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    audio {
+        width: 70%; /* 使用百分比 */
+        margin: 10px; /* 使用百分比或其它适合的单位 */
+    }
+}
+
+/* 适用于屏幕宽度在 768px 到 959px 之间的设备 */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    audio {
+        width: 80%; /* 使用百分比 */
+        margin: 5px; /* 使用百分比或其它适合的单位 */
+    }
+}
+
+/* 适用于屏幕宽度在 480px 到 767px 之间的设备 */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    audio {
+        width: 90%; /* 使用百分比 */
+        margin: 3px; /* 使用百分比或其它适合的单位 */
+    }
+}
+
+/* 适用于屏幕宽度小于 480px 的设备 */
+@media only screen and (max-width: 479px) {
+    audio {
+        width: 95%; /* 使用百分比 */
+        margin: 2px; /* 使用百分比或其它适合的单位 */
+    }
+}
+
 body {
     position: relative;
     margin: 0;
@@ -5,19 +37,6 @@ body {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
     color: #ffffff;
-}
-
-/*音乐播放器*/
-audio {
-    position: absolute;
-    width: 400px;
-    margin: 20px;
-    top: 690px;
-    left: 995px;
-    border-radius: 8px;
-    outline: none;
-    appearance: none;
-    z-index: 5;
 }
 
 /*眉页和地页设置*/
@@ -72,18 +91,91 @@ audio {
 }
 
 /*中间内容设置*/
-.overlay-A {
+.All.overlay {
     position: absolute;
-    width: 350px;
-    height: 500px;
-    margin: auto;
-    top: 150px;
-    left: 0px;
-    bottom: 100px;
-    right: 340px;
+    top: 53.5%;
+    left: 50%;
     z-index: 3;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    height: 60%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.0); /* 这里设置为红色的半透明背景，你可以根据需要调整颜色和透明度 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-A::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-A::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-B::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-B::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-C::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-C::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-D::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-D::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-E::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-E::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/*音乐播放器*/
+.All.overlay audio {
+    position: absolute;
+    margin: auto;
+    width: 95%; 
+    height: 85%;
+    top: 4%;
+    left: 2%; 
+    outline: none;
+    appearance: none;
+    z-index: 5;
     overflow-y: auto;
-    padding: 20px;
+}
+
+.All.overlay .overlay-A {
+    position: absolute;
+    width: 25%;
+    height: 85%;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 26.5%;
+    overflow-y: auto;
+    padding: 2%;
     border-radius: 10px; /* 设置边框圆角 */
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
@@ -92,19 +184,19 @@ audio {
 
 .text-blockA {
     position: relative;
-    top: 30px; 
+    top: 3%; 
     font-size: 35px; 
     font-weight: bold;
 }
 
-.overlay-B {
+.All.overlay .overlay-B {
     position: absolute;
-    width: 170px;
-    height: 135px;
+    width: 13%;
+    height: 24%;
     margin: auto;
-    top: 0px;
-    left: 340px;
-    bottom: 315px;
+    top: 0;
+    left: 26%;
+    bottom: 63%;
     right: 0;
     z-index: 3;
     padding: 20px;
@@ -121,14 +213,14 @@ audio {
     font-weight: bold;
 }
 
-.overlay-C {
+.All.overlay .overlay-C {
     position: absolute;
-    width: 140px;
-    height: 360px;
+    width: 10%;
+    height: 63%;
     margin: auto;
-    top: 0px;
-    left: 800px;
-    bottom: 90px;
+    top: 0;
+    left: 61.5%;
+    bottom: 24%;
     right: 0px;
     z-index: 3;
     overflow-y: auto;
@@ -146,13 +238,13 @@ audio {
     font-weight: bold;
 }
 
-.overlay-D {
+.All.overlay .overlay-D {
     position: absolute;
-    width: 385px;
-    height: 70px;
+    width: 29%;
+    height: 12%;
     margin: auto;
-    top: 480px;
-    left: 555px;
+    top: 75%;
+    left: 42%;
     bottom: 0px;
     right: 0px;
     z-index: 3;
@@ -166,21 +258,21 @@ audio {
 
 .text-blockD {
     position: relative;
-    top: -10px; 
-    left: 140px;
+    top: -10%; 
+    left: 35%;
     font-size: 18px; 
     font-weight: bold;
 }
 
-.overlay-E {
+.All.overlay .overlay-E {
     position: absolute;
-    width: 100px;
-    height: 500px;
+    width: 8%;
+    height: 86%;
     margin: auto;
-    top: 150px;
+    top: 0px;
     left: 0px;
-    bottom: 100px;
-    right: 960px;
+    bottom: 0px;
+    right: 73%;
     z-index: 3;
     overflow-y: auto;
     padding: 20px;
@@ -219,17 +311,19 @@ audio {
 
 /*搜索栏整体设置*/
 
-#content-container {
-    display: none;
-}
-
-.custom-search-bar {
-    position: relative;
-}
-
-#search-bar-container {
-    position: relative;
-    top: 80px; /* 调整搜索栏容器的上边距 */
+.search-box {
+    position: absolute;
+    top: 15%;
+    left: 52%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    height: 10%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.0); /* 这里设置为红色的半透明背景，你可以根据需要调整颜色和透明度 */
 }
 
 #search-bar {
@@ -264,16 +358,10 @@ audio {
     margin-left: 5px; /* 调整左侧边距 */
 }
 
-/*logo链接*/
-#social-container {
-    display: none;
-    justify-content: space-around;
-}
-
 .logo-overlay-C {
     position: absolute;
-    width: 60px;
-    height: 40px;
+    width: 50%;
+    height: 10%;
     margin: auto;
     z-index: 3;
     background: rgba(0, 0, 0, 0.8);
@@ -287,8 +375,8 @@ audio {
 
 .logo-overlay-B {
     position: absolute;
-    width: 100px;
-    height: 50px;
+    width: 60%;
+    height: 13%;
     margin: auto;
     z-index: 3;
     background: rgba(0, 0, 0, 0.8);
@@ -302,8 +390,8 @@ audio {
 
 .logo-overlay-A {
     position: absolute;
-    width: 90px;
-    height: 50px;
+    width: 50%;
+    height: 27%;
     margin: auto;
     z-index: 3;
     background: rgba(0, 0, 0, 0.6);
@@ -332,28 +420,28 @@ audio {
 
 .logo-overlay-A {
     top: 0px;
-    left: 305px;
-    bottom: 360px;
+    left: 0;
+    bottom: 30%;
     right: 0;
 }
 
 .logo-overlay-B {
     top: 0;
-    left: 800px;
-    bottom: 360px;
+    left: 0;
+    bottom: 65%;
     right: 0;
 }
 
 .logo-overlay-C {
-    top: 0px;
-    left: 0px;
-    bottom: 360px;
-    right: 960px;
+    top: 0;
+    left: 0;
+    bottom: 75%;
+    right: 0;
 }
 
 .logo-overlay-D {
-    top: 130px;
-    left: 320px;
+    top: 15%;
+    left: 24.5%;
     bottom: 0px;
     right: 0;
 }
