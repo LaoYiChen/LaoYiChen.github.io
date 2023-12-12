@@ -75,6 +75,33 @@ body {
     overflow: hidden; /* 隐藏溢出的内容 */
 }
 
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-A::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-A::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-B::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-B::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
+/* 隐藏滚动条，但保留滚动功能 */
+.All.overlay .overlay-C::-webkit-scrollbar {
+    width: 0.5em; /* 设置滚动条的宽度为 0.5em，以确保其存在但不可见 */
+}
+
+.All.overlay .overlay-C::-webkit-scrollbar-thumb {
+    background-color: transparent; /* 滑块透明 */
+}
+
 .overlay-A {
     top: 10%;
     left: 55%;
