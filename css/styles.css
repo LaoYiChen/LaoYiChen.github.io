@@ -94,12 +94,12 @@ body {
 /*中间内容设置*/
 .All.overlay {
     position: absolute;
-    top: 53.5%;
+    top: 56.5%;
     left: 50%;
     z-index: 3;
     transform: translate(-50%, -50%);
-    width: 1300px; 
-    height: 600px; 
+    width: 95%; 
+    height: 60%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,7 +313,7 @@ body {
 
 .search-box {
     position: absolute;
-    top: 15%;
+    top: 22.5%;
     left: 52%;
     z-index: 3;
     transform: translate(-50%, -50%);
